@@ -1,0 +1,88 @@
+/* Mobile-first. Breakpoint: 48em (768px at default font size).
+   Using em means the layout also switches to mobile when a reader zooms text up,
+   which keeps zoomed text readable instead of squeezed into three columns. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "d"
+    "b"
+    "c"
+    "g";
+  border: 1px solid #888;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.box {
+  min-width: 0;                 /* lets long words shrink inside a grid track */
+  min-height: 4.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #888;
+  text-align: center;
+}
+
+.box h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  overflow-wrap: anywhere;      /* long headings wrap instead of overflowing */
+  hyphens: auto;
+}
+
+.box p {
+  margin: 0;
+}
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+.g { grid-area: g; }
+.h { grid-area: h; }
+
+/* Hidden on mobile: display:none also removes them from the tab order
+   and the accessibility tree, which is correct for content that isn't shown. */
+.e,
+.f,
+.h {
+  display: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #0057d9;
+  outline-offset: 2px;
+}
+
+@media (min-width: 48em) {
+  .layout {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "a a b"
+      "c d e"
+      "f g h";
+  }
+
+  .e,
+  .f,
+  .h {
+    display: block;
+  }
+}

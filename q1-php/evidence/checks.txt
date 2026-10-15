@@ -1,0 +1,68 @@
+=== GET /
+HTTP 200
+<h1> Page 1 of 3 </h1> 
+posts shown: 10 | first: Ads post | last: Hello post 17
+ad divs: class="ad ad-1" class="ad ad-2" class="ad ad-3" 
+PHP warnings in output: 0
+
+=== GET /?s=hello
+HTTP 200
+<h1> Page 1 of 3 : Search for hello </h1> 
+posts shown: 10 | first: Hello post 25 | last: Hello post 16
+ad divs: 
+PHP warnings in output: 0
+
+=== GET /?s=hello&page=2
+HTTP 200
+<h1> Page 2 of 3 : Search for hello </h1> 
+posts shown: 10 | first: Hello post 15 | last: Hello post 6
+ad divs: 
+PHP warnings in output: 0
+
+=== GET /?page=3
+HTTP 200
+<h1> Page 3 of 3 </h1> 
+posts shown: 6 | first: Hello post 6 | last: Hello post 1
+ad divs: 
+PHP warnings in output: 0
+
+=== GET /?s=zzzxqq
+HTTP 200
+<h1> Page 1 of 1 : Search for zzzxqq </h1> 
+posts shown: 0 | first:  | last: 
+ad divs: 
+No posts found for “zzzxqq”.
+PHP warnings in output: 0
+
+=== GET /?s=Ads
+HTTP 200
+<h1> Page 1 of 1 : Search for Ads </h1> 
+posts shown: 1 | first: Ads post | last: Ads post
+ad divs: class="ad ad-1" class="ad ad-2" class="ad ad-3" 
+PHP warnings in output: 0
+
+=== GET /?page=abc
+HTTP 200
+<h1> Page 1 of 3 </h1> 
+posts shown: 10 | first: Ads post | last: Hello post 17
+ad divs: class="ad ad-1" class="ad ad-2" class="ad ad-3" 
+PHP warnings in output: 0
+
+=== GET /?page=%3Cscript%3Ealert(1)%3C/script%3E&s=%3Cimg%20src=x%20onerror=alert(1)%3E
+HTTP 200
+<h1> Page 1 of 3 </h1> 
+posts shown: 10 | first: Ads post | last: Hello post 17
+ad divs: class="ad ad-1" class="ad ad-2" class="ad ad-3" 
+PHP warnings in output: 0
+
+--- Ads post content block:
+			<div class="entry-content"><p>Intro paragraph about data and ads.</p>
+<div class="ad ad-1"></div>
+<p>Middle paragraph.</p>
+<div class="ad ad-2"></div>
+<p>Inline marker here <div class="ad ad-3"></div> mid sentence.</p>
+<p>End.</p>
+</div>
+		</article>
+--- WP debug.log:
+(no entries)

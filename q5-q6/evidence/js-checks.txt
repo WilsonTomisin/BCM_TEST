@@ -1,0 +1,45 @@
+1. Initial load
+    P P HR Pi
+  PASS  load: separators correct for 3 paragraphs (1 HRs)
+  PASS  toggle button created by JS, after 'Hit me'
+  PASS  toggle button not in the HTML source
+2. Repeated clicks (toggle not used)
+    click 1: P P HR Pi P HR P Pi
+  PASS  click 1: separators correct for 6 paragraphs (2 HRs)
+  PASS  click 1: 6 paragraphs
+    click 2: P P HR Pi P HR P Pi HR P P HR Pi
+  PASS  click 2: separators correct for 9 paragraphs (4 HRs)
+  PASS  click 2: 9 paragraphs
+    click 3: P P HR Pi P HR P Pi HR P P HR Pi P HR Pi P
+  PASS  click 3: separators correct for 12 paragraphs (5 HRs)
+  PASS  click 3: 12 paragraphs
+    click 4: P P HR Pi P HR P Pi HR P P HR Pi P HR Pi P HR Pi P HR P
+  PASS  click 4: separators correct for 15 paragraphs (7 HRs)
+  PASS  click 4: 15 paragraphs
+3. Copies are the three originals, randomised
+  PASS  every copy group contains exactly the 3 originals
+  PASS  randomised: 6 distinct orders seen in 40 clicks (6 possible)
+4. Toggle AFTER adding paragraphs
+    P P HR pi P HR P pi HR P P HR pi P HR pi P HR pi P HR P
+  PASS  all image paragraphs hidden
+  PASS  non-image paragraphs still visible
+  PASS  after hide (hidden still counted): separators correct for 15 paragraphs (7 HRs)
+  PASS  aria-pressed=true
+5. Add while hidden: new image paragraphs stay hidden
+    P P HR pi P HR P pi HR P P HR pi P HR pi P HR pi P HR P pi HR P P HR pi P HR P
+  PASS  no visible image paragraphs after 2 more clicks
+  PASS  add while hidden: separators correct for 21 paragraphs (10 HRs)
+6. Show again
+  PASS  all 7 image paragraphs visible
+  PASS  after show: separators correct for 21 paragraphs (10 HRs)
+7. Toggle BEFORE adding any paragraphs (fresh page)
+    P P HR pi
+  PASS  original image paragraph hidden
+    P P HR pi P HR pi P
+  PASS  copy added while hidden is hidden
+  PASS  toggle-first then add: separators correct for 6 paragraphs (2 HRs)
+  PASS  odd number of further toggles → visible again
+  PASS  rapid toggles: separators correct for 6 paragraphs (2 HRs)
+  PASS  no JavaScript errors
+
+ALL CHECKS PASSED

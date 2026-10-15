@@ -1,0 +1,17 @@
+Error: Attribute “name” not allowed on element “abbr” at this point.
+From line 18, column 44; to line 19, column 16 in resource structure-only
+Info: The “name” attribute is never allowed on the “abbr” element.
+From line 18, column 44; to line 19, column 16 in resource structure-only
+Error: Attribute “with” not allowed on element “img” at this point.
+From line 20, column 9; to line 20, column 48 in resource structure-only
+Error: Bad value “auto” for attribute “height” on element “img”: Expected a digit but saw “a” instead.
+From line 20, column 9; to line 20, column 48 in resource structure-only
+Error: An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
+From line 20, column 9; to line 20, column 48 in resource structure-only
+Error: End tag “code” violates nesting rules.
+From line 22, column 33; to line 22, column 39 in resource structure-only
+Error: No “b” element in scope but a “b” end tag seen.
+From line 22, column 40; to line 22, column 43 in resource structure-only
+Warning: Consider adding a “lang” attribute to the “html” start tag to declare the language of this document.
+From line 1, column 16; to line 2, column 6 in resource structure-only
+Document checking completed.

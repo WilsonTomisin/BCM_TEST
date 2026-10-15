@@ -1,0 +1,14 @@
+{
+  "name": "bcm-developer-test",
+  "version": "1.0.0",
+  "description": "BCM developer test submission",
+  "scripts": {
+    "check": "bash run-checks.sh",
+    "test": "node --test --test-reporter=spec q9-signup/subscribe.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vnu-jar": "^26.10.12"
+  }
+}

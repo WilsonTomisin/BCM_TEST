@@ -1,0 +1,8 @@
+[desktop 1280px] visual order: A B C D E F G H
+[desktop 1280px] keyboard tab order: A B C D E F G H
+[desktop 1280px] width of A = 767px, width of C = 383px
+[desktop 1280px] long heading: boxes overflowing=0, horizontal page scroll=False
+[mobile 390px] visual order: A D B C G
+[mobile 390px] keyboard tab order: A B C D G
+[mobile 390px] width of A = 356px, width of C = 356px
+[mobile 390px] long heading: boxes overflowing=0, horizontal page scroll=False

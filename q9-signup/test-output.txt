@@ -1,0 +1,17 @@
+✔ baseline: a naive retry after "accepted, then timed out" creates a DUPLICATE (1.112185ms)
+✔ retry after the service already accepted: no duplicate (5.648176ms)
+✔ timeout before the service received it: retried and created once (2.660444ms)
+✔ rate limit: honours Retry-After, then succeeds, one record (21.693095ms)
+✔ rate limited beyond max attempts: kept as pending, not lost (33.768034ms)
+✔ invalid email locally: rejected, no network call, no row (1.709755ms)
+✔ invalid email per the service (422): rejected, not retried (0.264746ms)
+✔ double submit (user clicks twice): one record (1.370718ms)
+✔ logs never contain the email address (15.237451ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 181.309465
